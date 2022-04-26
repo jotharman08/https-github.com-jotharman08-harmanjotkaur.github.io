@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<link rel="stylesheet" href="style.css">
+<link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'><link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+</head>
+<body>
+</head>
+<body>
+<nav class="navbar">
+  <div class="main-logo"><a href="#" class="navbar-brand"><img class="logo" id="logo" src="Asset logo.jpg" alt="Footwear Logo"></a></div>
+  <div class="small-logo">
+
+    <div class="topnav"> 
+      <a href="my-account.html">My Account</a>
+  <a href="cart.html">Cart</a>
+
+    </div>
+
+  <!-- The form -->
+<form class="example" action="action_page.php">
+  <input type="text" placeholder="Search.." name="search">
+  <button type="submit"><i class="fa fa-search">&#128269</i></button>
+</form>
+ 
+  </div>
+</nav>
+
+<div class="sidenav">
+  <a href="home.html">Home</a>
+ <a href="index.html">Casual Shoes</a>
+  <a href="flat-sandals.html">Flat Sandals</a>
+  <a href="sports-shoes.html">Sports Shoes</a>
+  <a href="flip-flops.html">Flip-FLops</a>
+  <a href="heeled-sandals.html">Heeled Sandals</a>
+  <a href="heels-shoes.html">Heels Shoes</a>
+  <a href="boots.html">Boots</a>
+</div>
+
+<div class="main">
+   <div class="img-slider">
+      <div class="slide active">
+        <img src="1.jpg" alt="">
+        <div class="info">
+   <br><br> <h2>From out store to your feet</h2>
+          
+        </div>
+      </div>
+      <div class="slide">
+        <img src="2.jpg" alt="">
+        <div class="info">
+          <h2>The best shoes at the tip of your fingers.</h2>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="3.jpg" alt="">
+        <div class="info">
+          <h2>We made shoes. </h2><h2>You spread the word.</h2>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="4.jpg" alt="">
+        <div class="info">
+          <h2>Feel the earth beneath your feet.</h2>
+          
+        </div>
+      </div>
+     
+      <div class="navigation">
+        <div class="btn active"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+      </div>
+    </div>
+	
+    <h1 id="our">Today's Offers</h1>
+   <div id="info">
+</div>
+  
+<li>
+      <div class="slide active">
+        <img src="sp.jfif" alt="">
+        <div class="info">
+   <h2>New Offers</h2>
+          
+        </div>
+      </div>
+    </li>
+
+    <li>
+      <div class="slide active">
+        <img src="dis.png" alt="">
+        <div class="info">
+   <h2>Discounts</h2>
+          
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="slide active">
+        <img src="eos.jpg" alt="">
+        <div class="info">
+   <h2>End of season sale</h2>
+          
+        </div>
+      </div>
+    </li>
+ 
+
+
+</div>
+
+<footer>
+<div class="footer">
+  <p style="margin-left: 20%"><a href="about.html"><b>About</b></a>
+  <a href="contact.html" style="margin-left: 30px"><b>Queries</b></a></p>
+</div>
+</footer>
+ <br/><br/><br/><br/>
+</body>
+
+<script type="text/javascript">
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
+
+    // Javascript for image slider manual navigation
+    var manualNav = function(manual){
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+
+        btns.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+      });
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+
+    // Javascript for image slider autoplay navigation
+    var repeat = function(activeClass){
+      let active = document.getElementsByClassName('active');
+      let i = 1;
+
+      var repeater = () => {
+        setTimeout(function(){
+          [...active].forEach((activeSlide) => {
+            activeSlide.classList.remove('active');
+          });
+
+        slides[i].classList.add('active');
+        btns[i].classList.add('active');
+        i++;
+
+        if(slides.length == i){
+          i = 0;
+        }
+        if(i >= slides.length){
+          return;
+        }
+        repeater();
+      }, 10000);
+      }
+      repeater();
+    }
+    repeat();
+    </script>
+	
+	
+</html>

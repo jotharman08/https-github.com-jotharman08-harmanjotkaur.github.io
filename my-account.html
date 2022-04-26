@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Account</title>
+<link rel="stylesheet" href="style.css">
+<link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+</head>
+
+<body>
+<nav class="navbar">
+  <div class="main-logo"><a href="#" class="navbar-brand"><img class="logo" id="logo" src="Asset logo.jpg" alt="Footwear Logo"></a></div>
+  <div class="small-logo">
+  <a href="my-account.html">My Account</a>
+  </div>
+</nav>
+
+<div class="sidenav">
+  <a href="home.html">Home</a>
+  <a href="index.html">Casual Shoes</a>
+  <a href="flat-sandals.html">Flat Sandals</a>
+  <a href="sports-shoes.html">Sports Shoes</a>
+  <a href="flip-flops.html">Flip-FLops</a>
+  <a href="heeled-sandals.html">Heeled Sandals</a>
+  <a href="heels-shoes.html">Heels Shoes</a>
+  <a href="boots.html">Boots</a>
+</div>
+
+<div class="main">
+  <div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+      <div class="front">
+        <img src="images/frontImg.jpg" alt="">
+        <div class="text">
+          <span class="text-1">Every new Purchase is a <br> new saving</span>
+          <span class="text-2">Let's get connected</span>
+        </div>
+      </div>
+      <div class="back">
+        <img class="backImg" src="images/backImg.jpg" alt="">
+        <div class="text">
+          <span class="text-1">Complete miles of journey <br> with one step</span>
+          <span class="text-2">Let's get started</span>
+        </div>
+      </div>
+    </div>
+    <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            <div class="title">Login</div>
+          <form action="#">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="text" placeholder="Enter your email" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Enter your password" required>
+              </div>
+              <div class="text"><a href="#">Forgot password?</a></div>
+              <div class="button input-box">
+                <input type="submit" value="Sumbit">
+              </div>
+              <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
+            </div>
+        </form>
+      </div>
+        <div class="signup-form">
+          <div class="title">Signup</div>
+        <form action="#">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Enter your name" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="text" placeholder="Enter your email" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Enter your password" required>
+              </div>
+              <div class="button input-box">
+                <input type="submit" value="Sumbit">
+              </div>
+              <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+            </div>
+      </form>
+    </div>
+    </div>
+    </div>
+  </div>
+    
+</div>
+<footer>
+  <div class="footer">
+    <p style="margin-left: 20%"><a href="about.html"><b>About</b></a>
+    <a href="contact.html" style="margin-left: 30px"><b>Queries</b></a></p>
+  </div>
+
+</footer>
+ <br/><br/><br/><br/>
+</body>
+
+<script type="text/javascript">
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
+
+    // Javascript for image slider manual navigation
+    var manualNav = function(manual){
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+
+        btns.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+      });
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+
+    // Javascript for image slider autoplay navigation
+    var repeat = function(activeClass){
+      let active = document.getElementsByClassName('active');
+      let i = 1;
+
+      var repeater = () => {
+        setTimeout(function(){
+          [...active].forEach((activeSlide) => {
+            activeSlide.classList.remove('active');
+          });
+
+        slides[i].classList.add('active');
+        btns[i].classList.add('active');
+        i++;
+
+        if(slides.length == i){
+          i = 0;
+        }
+        if(i >= slides.length){
+          return;
+        }
+        repeater();
+      }, 10000);
+      }
+      repeater();
+    }
+    repeat();
+    </script>
+</html>

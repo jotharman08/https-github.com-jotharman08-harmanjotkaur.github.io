@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>cart</title>
+<link rel="stylesheet" href="style.css" media="screen">
+<link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.shop.js"></script>
+</head>
+<body>
+</head>
+<body>
+<nav class="navbar">
+  <div class="main-logo"><a href="#" class="navbar-brand"><img class="logo" id="logo" src="Asset logo.jpg" alt="Footwear Logo"></a></div>
+  <div class="small-logo">
+
+
+  <div class="topnav"> 
+        <a href="my-account.html">My Account</a>
+    <a href="cart.html">Cart</a>
+    <a href="home.html">Home</a>
+
+      </div>
+
+  </div>
+</nav>
+
+<div class="sidenav">
+  <a href="home.html">Home</a>
+ <a href="index.html">Casual Shoes</a>
+  <a href="flat-sandals.html">Flat Sandals</a>
+  <a href="sports-shoes.html">Sports Shoes</a>
+  <a href="flip-flops.html">Flip-FLops</a>
+  <a href="heeled-sandals.html">Heeled Sandals</a>
+  <a href="heels-shoes.html">Heels Shoes</a>
+  <a href="boots.html">Boots</a>
+</div>
+
+<div class="main">	
+  <h1 id="our">Cart</h1>
+    <!-- Title -->
+    
+    <div class="cart-box">
+
+   <div id="site">
+    <div id="content">
+      <h1>Your Shopping Cart</h1>
+      <form id="shopping-cart" action="cart.html" method="post">
+        <table class="shopping-cart">
+          <thead>
+          <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Qty</th>
+            <th scope="col" colspan="2">Price</th>
+          </tr>
+          </thead>
+          <tbody>
+          
+          </tbody>
+        </table>
+        <p id="sub-total">
+          <strong>Sub Total</strong>: <span id="stotal"></span>
+        </p>
+        <ul id="shopping-cart-actions">
+          <li>
+            <input type="submit" name="update" id="update-cart" class="btn" value="Update Cart" />
+          </li>
+          <li>
+            <input type="submit" name="delete" id="empty-cart" class="btn" value="Empty Cart" />
+          </li>
+          <li>
+            <a href="home.html" class="btn">Continue Shopping</a>
+          </li>
+          <li>
+            <a href="checkout.html" class="btn">Go To Checkout</a>
+          </li>
+        </ul>
+      </form>
+    </div>
+    
+    
+  
+  </div>
+   
+
+    </div>
+      
+  </div>
+
+  <footer id="site-info">
+		Copyright &copy; FootWear Track
+	</footer>
+  
+    
+</body>
+</html>
